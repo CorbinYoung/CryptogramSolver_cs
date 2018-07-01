@@ -1,4 +1,4 @@
-package dm;
+package main.com.cryptogram.solver;
 
 import java.util.HashMap;
 import java.util.Map;

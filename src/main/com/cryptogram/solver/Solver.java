@@ -1,11 +1,7 @@
-package pd;
+package main.com.cryptogram.solver;
 
-import dm.DataReader;
-import dm.StringPattern;
-import dm.storage.DataStorage;
-import dm.storage.Dictionary;
-import pd.stackStuff.ADTStack;
-import pd.stackStuff.Stack;
+import main.com.cryptogram.solver.stackStuff.ADTStack;
+import main.com.cryptogram.solver.stackStuff.Stack;
 
 import java.util.ArrayList;
 import java.util.List;

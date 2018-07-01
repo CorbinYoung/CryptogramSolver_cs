@@ -1,7 +1,4 @@
-package dm;
-
-import dm.storage.DataStorage;
-import dm.storage.Dictionary;
+package main.com.cryptogram.solver;
 
 import java.io.IOException;
 import java.nio.file.FileSystems;

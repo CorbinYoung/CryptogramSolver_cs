@@ -1,4 +1,4 @@
-package dm;
+package main.com.cryptogram.solver;
 
 /**
  * This class manages punctuation, which is separated into two categories.

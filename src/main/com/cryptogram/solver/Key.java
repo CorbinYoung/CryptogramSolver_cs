@@ -1,8 +1,6 @@
-package pd;
+package main.com.cryptogram.solver;
 
-import dm.StringPattern;
-import dm.storage.Dictionary;
-import pd.stackStuff.Stack;
+import main.com.cryptogram.solver.stackStuff.Stack;
 
 import java.util.HashMap;
 import java.util.List;

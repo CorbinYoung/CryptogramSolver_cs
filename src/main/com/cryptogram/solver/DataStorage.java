@@ -1,6 +1,4 @@
-package dm.storage;
-
-import dm.Punctuation;
+package main.com.cryptogram.solver;
 
 import java.util.*;
 
