@@ -44,5 +44,3 @@ to solve. This method can be used to verify that it is actually trying to solve 
 3. displayKey() - This method will display the current state of the key. If you call this method before
 you try and solve a cryptogram, it will show everything as null. Once you've called solve(), the key
 will be the final form of the key for that specific cryptogram.
-
-This is a test
