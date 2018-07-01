@@ -44,11 +44,11 @@ public final class Solver {
      * @param index starting index in the list of decrypted matches
      * @return the index of a pair that was successfully inserted into the key
      */
-    private int pickMatch(final String word, int index) throws MyException{
+    private int pickMatch(final String word, int index) {
         Set<String> mySet = dictionary.getWordSubset(word.length(), StringPattern.getPattern(word));
         
         if(mySet == null)
-            throw new MyException("No matches found for: " + word);
+            throw new RuntimeException("No matches found for: " + word);
             
         List<String> myList = new ArrayList<>(mySet);
         
@@ -71,10 +71,8 @@ public final class Solver {
      *      4b. Go back to the previous encrypted word and find a different match
      *  5. If the stack is now empty and we still haven't found a valid match, the cryptogram is unsolvable
      *  6. Otherwise, push our new match on the stack and repeat 2-6
-     *
-     * @throws MyException if the cryptogram is unable to be solved
      */
-    private void createKey() throws MyException {
+    private void createKey() {
         int wI = 0, mI;
         
         Index index;
@@ -98,7 +96,7 @@ public final class Solver {
             }
                 
             if(mI < 0)
-                throw new MyException("Cryptogram is unsolvable");
+                throw new RuntimeException("Cryptogram is unsolvable");
     
             stack.push(new Index(wI, mI));
         }
@@ -147,9 +145,8 @@ public final class Solver {
      *
      * @param file contains the name of the file that holds the encrypted message
      * @return final decrypted message
-     * @throws MyException  if the cryptogram is unable to be solved
      */
-    public final String solve(final String file) throws MyException {
+    public final String solve(final String file) {
         reset();
 
         DataReader.readData(file);

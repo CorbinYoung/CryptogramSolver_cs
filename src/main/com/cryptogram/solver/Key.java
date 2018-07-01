@@ -84,7 +84,7 @@ public final class Key {
      *
      * Algorithm:
      *  1. Pop one {@code Index} off the {@code Stack}
-     *  2. Re-input all other pairs still on the {@code Stack} to ensure that no older word had the same key -> value pair
+     *  2. Re-input all other pairs still on the {@code Stack} to ensure that no older word had the same key/value pair
      *
      * @param stack the current {@code Stack} of words that have been solved
      * @param words {@code List} of all the encrypted words

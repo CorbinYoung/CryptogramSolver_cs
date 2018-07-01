@@ -39,7 +39,7 @@ public final class Dictionary {
      *
      * @param word word to be added to the dictionary
      */
-    public void addWord(final String word) {
+    final void addWord(final String word) {
         final String pattern = StringPattern.getPattern(word);
         final int key = word.length();
         
@@ -55,7 +55,7 @@ public final class Dictionary {
      * @param pattern specified pattern
      * @return {@code Set} of words
      */
-    public Set<String> getWordSubset(final int key, final String pattern) {
+    final Set<String> getWordSubset(final int key, final String pattern) {
         return words.get(key).get(pattern);
     }
 }

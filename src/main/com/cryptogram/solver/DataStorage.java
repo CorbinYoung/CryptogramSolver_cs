@@ -34,23 +34,23 @@ public final class DataStorage {
      *
      * @param newData line of data to be added to storage
      */
-    public final void addData(final String newData) {
+    final void addData(final String newData) {
         eMsg.append(newData);
         eMsg.append("\n");
         
         String[] pieces = newData.split("\\s");
-        String noPunc;
+        String noPunctuation;
         
         for(String piece : pieces) {
-            noPunc = Punctuation.removeBadPunctuation(piece);
+            noPunctuation = Punctuation.removeBadPunctuation(piece);
             
             //Part of this check here is to make sure that the data doesn't have any punctuation, good or bad
             //  The reason for this is that my dictionary doesn't contain any words that have punctuation, so
             //  those words would never have a match and the cryptogram would always be unsolvable.
             //Technically, the structure I'm using here is a set, but I couldn't use an actual {@code Set} because
             //  they can't be sorted, and I wanted to sort all of the words by length
-            if(!Punctuation.hasGoodPunctuation(noPunc) && !data.contains(noPunc))
-                data.add(noPunc);
+            if(!Punctuation.hasGoodPunctuation(noPunctuation) && !data.contains(noPunctuation))
+                data.add(noPunctuation);
         }
         
         //This sorts the words in the list from longest to shortest
@@ -58,11 +58,11 @@ public final class DataStorage {
     }
 
     /**
-     * This method gets the original enrypted message
+     * This method gets the original encrypted message
      *
      * @return original encrypted message
      */
-    public final String getMsg() {
+    final String getMsg() {
         return eMsg.toString();
     }
 

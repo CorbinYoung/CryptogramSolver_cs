@@ -8,7 +8,7 @@ import java.util.Map;
  *
  * @author Corbin Young
  */
-public final class StringPattern {
+final class StringPattern {
     
     /**
      * Creates the pattern for a word and returns it as a string. This method allows for up to 16 different
@@ -16,15 +16,15 @@ public final class StringPattern {
      *  already been added will be ignored.
      *
      * Examples:
-     *  THAT -> 0120
-     *  PEOPLE -> 012031
-     *  MISSISSIPPI -> 01221221331
-     *  WATERMELON -> 0123453678
+     *  THAT = 0120
+     *  PEOPLE = 012031
+     *  MISSISSIPPI = 01221221331
+     *  WATERMELON = 0123453678
      *
      * @param word word to get the pattern from
      * @return the pattern of the word
      */
-    public static String getPattern(final String word) {
+    static String getPattern(final String word) {
         final StringBuilder pattern = new StringBuilder();
         final Map<Character, String> key = new HashMap<>();
 

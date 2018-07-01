@@ -11,7 +11,7 @@ package main.com.cryptogram.solver;
  *
  * @author Corbin Young
  */
-public final class Punctuation {
+final class Punctuation {
     
     private static final char[] badPunctuation = {',', '!', '.', '?', '\"', ':', ';'};
     
@@ -73,7 +73,7 @@ public final class Punctuation {
      * @param word word to be checked
      * @return true if word has "good punctuation," false if it does not
      */
-    public static boolean hasGoodPunctuation(final String word) {
+    static boolean hasGoodPunctuation(final String word) {
         for(char letter : word.toCharArray()) {
             if(isGoodPunctuation(letter)){
                 return true;
@@ -89,7 +89,7 @@ public final class Punctuation {
      * @param word word to be checked
      * @return the input word without any "bad punctuation"
      */
-    public static String removeBadPunctuation(final String word) {
+    static String removeBadPunctuation(final String word) {
         
         if(!hasBadPunctuation(word))
             return word;

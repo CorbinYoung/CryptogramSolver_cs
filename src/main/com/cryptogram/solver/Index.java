@@ -2,7 +2,7 @@ package main.com.cryptogram.solver;
 
 /**
  * This class holds the indexes for a current pair
- *  one encrypted word -> one decrypted word
+ *  one encrypted word = one decrypted word
  *
  * @author Corbin Young
  */

@@ -21,18 +21,13 @@ public final class SLL<E> {
         private Node<E> getNext() {
             return next;
         }
-        
-        private void setNext(Node<E> n) {
-            next = n;
-        }
     }
     
     private Node<E> head = null;
-    private Node<E> tail = null;
     
     private int size = 0;
     
-    public SLL() {
+    SLL() {
     }
     
     public final boolean isEmpty() {
@@ -50,32 +45,26 @@ public final class SLL<E> {
         return head.getElement();
     }
     
-    public final void addFirst(final E e) {
+    final void addFirst(final E e) {
         head = new Node<>(e, head);
-        
-        if(isEmpty())
-            tail = head;
         
         size++;
     }
     
-    public final E removeFirst() {
+    final E removeFirst() {
         if(isEmpty())
             return null;
         
-        E e = head.getElement();
+        final E e = head.getElement();
         
         head = head.getNext();
     
         size--;
         
-        if(isEmpty())
-            tail = null;
-        
         return e;
     }
     
-    public final List<E> getAsList() {
+    final List<E> getAsList() {
         List<E> list = new ArrayList<>();
         
         Node<E> ptr = head;
@@ -88,9 +77,8 @@ public final class SLL<E> {
         return list;
     }
 
-    public final void removeAll() {
+    final void removeAll() {
         head = null;
-        tail = null;
         size = 0;
     }
 }

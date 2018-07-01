@@ -11,14 +11,14 @@ import java.util.stream.Collectors;
  *
  * @author Corbin Young
  */
-public final class DataReader {
+final class DataReader {
     
     /**
      * This method reads an encrypted message from a file
      *
      * @param dataFile name of the file containing encrypted message
      */
-    public static void readData(final String dataFile) {
+    static void readData(final String dataFile) {
         try {
             final Path path = FileSystems.getDefault().getPath(dataFile);
             Files.lines(path).collect(Collectors.toList()).forEach(line -> DataStorage.getInstance().addData(line.toUpperCase()));
@@ -31,7 +31,7 @@ public final class DataReader {
     /**
      * This method read in all of the english words from a file
      */
-    public static void readWords() {
+    static void readWords() {
         try {
             final Path path = FileSystems.getDefault().getPath("words.txt");
             Files.lines(path).collect(Collectors.toList()).forEach(line -> Dictionary.getInstance().addWord(Punctuation.removeBadPunctuation(line.toUpperCase())));
