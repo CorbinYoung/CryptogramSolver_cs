@@ -8,7 +8,7 @@ import java.util.List;
  * @author Corbin Young
  * @param <E> type of stack
  */
-public interface Stack<E> {
+interface Stack<E> {
 
     /**
      * This method gets the element at the top of the stack

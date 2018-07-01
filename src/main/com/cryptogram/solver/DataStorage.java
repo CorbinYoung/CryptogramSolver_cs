@@ -7,7 +7,7 @@ import java.util.*;
  *
  * @author Corbin Young
  */
-public final class DataStorage {
+final class DataStorage {
 
     private static final DataStorage instance = new DataStorage();
 
@@ -25,7 +25,7 @@ public final class DataStorage {
      *
      * @return instance
      */
-    public static DataStorage getInstance() {
+    static DataStorage getInstance() {
         return instance;
     }
 
@@ -66,14 +66,14 @@ public final class DataStorage {
         return eMsg.toString();
     }
 
-    public final List<String> getData() {
+    final List<String> getData() {
         return data;
     }
 
     /**
      * This method clears all of the data
      */
-    public final void clear() {
+    final void clear() {
         data.clear();
         eMsg.delete(0, eMsg.length());
     }

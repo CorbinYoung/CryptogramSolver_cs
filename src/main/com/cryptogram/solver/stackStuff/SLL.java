@@ -3,7 +3,7 @@ package main.com.cryptogram.solver.stackStuff;
 import java.util.ArrayList;
 import java.util.List;
 
-public final class SLL<E> {
+final class SLL<E> {
     
     private static final class Node<E> {
         private final E element;
@@ -30,15 +30,15 @@ public final class SLL<E> {
     SLL() {
     }
     
-    public final boolean isEmpty() {
+    final boolean isEmpty() {
         return size == 0;
     }
     
-    public final int size() {
+    final int size() {
         return size;
     }
     
-    public final E getFirst() {
+    final E getFirst() {
         if(isEmpty())
             return null;
         

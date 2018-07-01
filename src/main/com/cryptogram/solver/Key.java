@@ -1,6 +1,6 @@
 package main.com.cryptogram.solver;
 
-import main.com.cryptogram.solver.stackStuff.Stack;
+import main.com.cryptogram.solver.stackStuff.ADTStack;
 
 import java.util.HashMap;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Map;
  *
  * @author Corbin Young
  */
-public final class Key {
+final class Key {
 
     private static final Key instance = new Key();
 
@@ -38,7 +38,7 @@ public final class Key {
      *
      * @return instance
      */
-    public static Key getInstance() {
+    static Key getInstance() {
         return instance;
     }
 
@@ -90,7 +90,7 @@ public final class Key {
      * @param words {@code List} of all the encrypted words
      * @return the {@code Index} that got popped off the {@code Stack}
      */
-    final Index updateKey(final Stack<Index> stack, final List<String> words) {
+    final Index updateKey(final ADTStack<Index> stack, final List<String> words) {
         Index removed = stack.pop();
         removeFromKey(words.get(removed.getWI()));
         
@@ -106,14 +106,14 @@ public final class Key {
         return removed;
     }
 
-    public final Map<Character, Character> getKey() {
+    final Map<Character, Character> getKey() {
         return key;
     }
 
     /**
      * This method clears all items in the {@code Key}
      */
-    public final void clear() {
+    final void clear() {
         key.clear();
     }
 }

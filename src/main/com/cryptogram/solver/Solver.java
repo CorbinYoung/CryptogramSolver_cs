@@ -1,7 +1,6 @@
 package main.com.cryptogram.solver;
 
 import main.com.cryptogram.solver.stackStuff.ADTStack;
-import main.com.cryptogram.solver.stackStuff.Stack;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +18,7 @@ public final class Solver {
     private final Key key = Key.getInstance();
     private final Dictionary dictionary = Dictionary.getInstance();
     private final DataStorage storage = DataStorage.getInstance();
-    private final Stack<Index> stack = new ADTStack<>();
+    private final ADTStack<Index> stack = new ADTStack<>();
     
     /**
      * Creates the instance of the {@code Solver}

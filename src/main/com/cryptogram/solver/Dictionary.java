@@ -13,7 +13,7 @@ import java.util.*;
  *
  * @author Corbin Young
  */
-public final class Dictionary {
+final class Dictionary {
 
     private static final Dictionary instance = new Dictionary();
 
@@ -30,7 +30,7 @@ public final class Dictionary {
      *
      * @return instance
      */
-    public static Dictionary getInstance() {
+    static Dictionary getInstance() {
         return instance;
     }
 

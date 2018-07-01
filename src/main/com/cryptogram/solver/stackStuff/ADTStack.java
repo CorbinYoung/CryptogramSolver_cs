@@ -3,12 +3,12 @@ package main.com.cryptogram.solver.stackStuff;
 import java.util.List;
 
 public final class ADTStack<E> implements Stack<E> {
-    
+
     private final SLL<E> list = new SLL<>();
     
     public ADTStack() {
     }
-    
+
     @Override
     public final E peek() {
         return list.getFirst();

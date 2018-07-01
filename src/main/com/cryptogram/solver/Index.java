@@ -6,7 +6,7 @@ package main.com.cryptogram.solver;
  *
  * @author Corbin Young
  */
-public final class Index {
+final class Index {
     private int wI;     //index for the encrypted word
     private int mI;     //index for the matching decrypted word
     
@@ -16,7 +16,7 @@ public final class Index {
      * @param word index for the encrypted word
      * @param match index for the decrypted word
      */
-    public Index(final int word, final int match) {
+    Index(final int word, final int match) {
         wI = word;
         mI = match;
     }
