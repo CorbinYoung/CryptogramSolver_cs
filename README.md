@@ -21,13 +21,15 @@ to add the plural form of some words. I have actually already added a few of the
 still in the file. **Do not move the file. If you move it, the Solver will not be able to find it, and
 the program will not work.** 
 
-As for using the project, I have only included the main files involved with the Solver, along with some other
+As for using the project, I have included the main files involved with the Solver, along with some other
 files that they use. The main files are: [Solver](src/main/com/cryptogram/solver/Solver.java), [Key](src/main/com/cryptogram/solver/Key.java),
 [DataStorage](src/main/com/cryptogram/solver/DataStorage.java), and [Dictionary](src/main/com/cryptogram/solver/Dictionary.java).
 
 Once you've pull the project down, all you have to do is create a main. Each of the above-listed classes
 are Singletons. You will only every need to reference the Solver class. Simply get its instance in main,
-and then call its solve() method. The Solver class will handle everything else.
+and then call its solve() method. The Solver class will handle everything else. I have also provided a Main
+under the src/test folder as an example, and I've included both the files it asks for with the project so you
+can see where they need to go if you want to use them.
 
 Solver has three public methods that are available:
 
