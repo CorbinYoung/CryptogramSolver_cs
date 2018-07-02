@@ -1,10 +1,9 @@
 package main.com.cryptogram.solver;
 
-import main.com.cryptogram.solver.stackStuff.ADTStack;
-
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Stack;
 
 /**
  * This class is in charge of managing the key for the cryptogram
@@ -90,14 +89,14 @@ final class Key {
      * @param words {@code List} of all the encrypted words
      * @return the {@code Index} that got popped off the {@code Stack}
      */
-    final Index updateKey(final ADTStack<Index> stack, final List<String> words) {
+    final Index updateKey(final Stack<Index> stack, final List<String> words) {
         Index removed = stack.pop();
         removeFromKey(words.get(removed.getWI()));
         
         String word;
         String eWord;
         
-        for(Index index : stack.getStackAsList()) {
+        for(Index index : stack) {
             word = words.get(index.getWI());
             eWord = (String) Dictionary.getInstance().getWordSubset(word.length(), StringPattern.getPattern(word)).toArray()[index.getMI()];
             addToKey(word, eWord);

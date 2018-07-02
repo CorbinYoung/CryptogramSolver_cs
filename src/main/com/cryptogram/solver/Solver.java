@@ -1,10 +1,9 @@
 package main.com.cryptogram.solver;
 
-import main.com.cryptogram.solver.stackStuff.ADTStack;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
+import java.util.Stack;
 
 /**
  * This class is in charge of the algorithm for solving the cryptogram.
@@ -18,8 +17,8 @@ public final class Solver {
     private final Key key = Key.getInstance();
     private final Dictionary dictionary = Dictionary.getInstance();
     private final DataStorage storage = DataStorage.getInstance();
-    private final ADTStack<Index> stack = new ADTStack<>();
-    
+    private final Stack<Index> stack = new Stack<>();
+
     /**
      * Creates the instance of the {@code Solver}
      */
