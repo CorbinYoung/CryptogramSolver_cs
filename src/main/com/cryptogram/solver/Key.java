@@ -65,9 +65,10 @@ final class Key {
                 if(key.get(letters[i]) != eLetters[i])
                     return false;
             } else if(key.containsValue(eLetters[i])) {
-                for(Character entry : key.keySet())
-                    if(key.get(entry) == eLetters[i] && entry != letters[i])
+                for(Character entry : key.keySet()) {
+                    if (key.get(entry) == eLetters[i] && entry != letters[i])
                         return false;
+                }
             }
         }
     
@@ -90,7 +91,7 @@ final class Key {
      * @return the {@code Index} that got popped off the {@code Stack}
      */
     final Index updateKey(final Stack<Index> stack, final List<String> words) {
-        Index removed = stack.pop();
+        final Index removed = stack.pop();
         removeFromKey(words.get(removed.getWI()));
         
         String word;

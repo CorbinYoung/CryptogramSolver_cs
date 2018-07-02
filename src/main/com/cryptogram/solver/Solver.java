@@ -2,7 +2,6 @@ package main.com.cryptogram.solver;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 import java.util.Stack;
 
 /**
@@ -42,17 +41,15 @@ public final class Solver {
      * @param index starting index in the list of decrypted matches
      * @return the index of a pair that was successfully inserted into the key
      */
-    private int pickMatch(final String word, int index) {
-        Set<String> mySet = dictionary.getWordSubset(word.length(), StringPattern.getPattern(word));
+    private int pickMatch(final String word, final int index) {
+        List<String> myList = new ArrayList<>(dictionary.getWordSubset(word.length(), StringPattern.getPattern(word)));
         
-        if(mySet == null)
+        if(myList.isEmpty())
             throw new RuntimeException("No matches found for: " + word);
-            
-        List<String> myList = new ArrayList<>(mySet);
         
-        for(; index < myList.size(); index++) {
-            if(key.addToKey(word, myList.get(index)))
-                return index;
+        for(int i = index; i < myList.size(); i++) {
+            if(key.addToKey(word, myList.get(i)))
+                return i;
         }
         
         return -1;
@@ -92,7 +89,7 @@ public final class Solver {
                 wI = index.getWI();
                 mI = pickMatch(words.get(wI), index.getMI() + 1);
             }
-                
+
             if(mI < 0)
                 throw new RuntimeException("Cryptogram is unsolvable");
     
