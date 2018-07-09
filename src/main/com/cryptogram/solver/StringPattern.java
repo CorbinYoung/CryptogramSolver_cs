@@ -2,7 +2,6 @@ package main.com.cryptogram.solver;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 /**
  * This class creates patterns for each word to be used to match pairs
