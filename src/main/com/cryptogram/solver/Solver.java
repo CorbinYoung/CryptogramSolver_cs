@@ -2,7 +2,6 @@ package main.com.cryptogram.solver;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Stack;
 
 /**
  * This class is in charge of the algorithm for solving the cryptogram.
@@ -16,7 +15,7 @@ public final class Solver {
     private final Key key = Key.getInstance();
     private final Dictionary dictionary = Dictionary.getInstance();
     private final DataStorage storage = DataStorage.getInstance();
-    private final Stack<Index> stack = new Stack<>();
+    private final IndexStack stack = IndexStack.getInstance();
 
     /**
      * Creates the instance of the {@code Solver}
