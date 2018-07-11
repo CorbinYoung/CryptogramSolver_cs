@@ -1,4 +1,4 @@
-package main.com.cryptogram.solver;
+package main.com.cryptogram.solver.java;
 
 import java.io.IOException;
 import java.nio.file.FileSystems;

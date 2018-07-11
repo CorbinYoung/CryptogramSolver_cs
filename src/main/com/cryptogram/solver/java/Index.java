@@ -1,4 +1,4 @@
-package main.com.cryptogram.solver;
+package main.com.cryptogram.solver.java;
 
 /**
  * This class holds the indexes for a current pair
