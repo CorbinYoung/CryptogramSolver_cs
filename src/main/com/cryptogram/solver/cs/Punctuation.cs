@@ -54,7 +54,7 @@ namespace CryptoSolver.main.com.cryptogram.solver.cs {
          * @param word word to be checked
          * @return true if word has "good punctuation," false if it does not
          */
-        static bool HasGoodPunctuation(string word) {
+        public static bool HasGoodPunctuation(string word) {
             return word.Any(IsGoodPunctuation);
         }
     
@@ -64,7 +64,7 @@ namespace CryptoSolver.main.com.cryptogram.solver.cs {
          * @param word word to be checked
          * @return the input word without any "bad punctuation"
          */
-        static string RemoveBadPunctuation(string word) {
+        public static string RemoveBadPunctuation(string word) {
             
             if(!HasBadPunctuation(word))
                 return word;

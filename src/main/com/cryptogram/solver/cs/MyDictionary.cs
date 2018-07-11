@@ -18,13 +18,13 @@ namespace CryptoSolver.main.com.cryptogram.solver.cs {
 
         private static readonly MyDictionary Instance = new MyDictionary();
 
-        private readonly Dictionary<int, Dictionary<string, HashSet<string>>> Words;
+        private readonly Dictionary<int, Dictionary<string, HashSet<string>>> _words;
 
         /*
          * Creates the instance of {@code Dictionary}
          */
         private MyDictionary() {
-            Words = new Dictionary<int, Dictionary<string, HashSet<string>>>();
+            _words = new Dictionary<int, Dictionary<string, HashSet<string>>>();
         }
 
         /*
@@ -32,7 +32,7 @@ namespace CryptoSolver.main.com.cryptogram.solver.cs {
          *
          * @return instance
          */
-        static MyDictionary GetInstance() {
+        public static MyDictionary GetInstance() {
             return Instance;
         }
 
@@ -41,19 +41,19 @@ namespace CryptoSolver.main.com.cryptogram.solver.cs {
          *
          * @param word word to be added to the dictionary
          */
-        void AddWord(string word) {
+        public void AddWord(string word) {
             String pattern = StringPattern.GetPattern(word);
             int key = word.Length;
 
-            if (!Words.ContainsKey(key)) {
-                Words.Add(key, new Dictionary<string, HashSet<string>>());
+            if (!_words.ContainsKey(key)) {
+                _words.Add(key, new Dictionary<string, HashSet<string>>());
             }
 
-            if (!Words[key].ContainsKey(pattern)) {
-                Words[key].Add(pattern, new HashSet<string>());
+            if (!_words[key].ContainsKey(pattern)) {
+                _words[key].Add(pattern, new HashSet<string>());
             }
             
-            Words[key][pattern].Add(word);
+            _words[key][pattern].Add(word);
         }
 
         /*
@@ -63,8 +63,8 @@ namespace CryptoSolver.main.com.cryptogram.solver.cs {
          * @param pattern specified pattern
          * @return {@code Set} of words
          */
-        HashSet<string> GetWordSubset(int key, string pattern) {
-            return Words[key][pattern];
+        public HashSet<string> GetWordSubset(int key, string pattern) {
+            return _words[key][pattern];
         }
     }
 }

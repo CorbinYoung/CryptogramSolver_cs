@@ -7,8 +7,8 @@
      * @author Corbin Young
      */
     sealed class Index {
-        private int Wi { get; }     //index for the encrypted word
-        private int Mi { get; }     //index for the matching decrypted word
+        private readonly int _wI;     //index for the encrypted word
+        private readonly int _mI;     //index for the matching decrypted word
         
         /*
          * Creates a new {@code Index} with the given indexes for the pair
@@ -16,9 +16,17 @@
          * @param word index for the encrypted word
          * @param match index for the decrypted word
          */
-        Index(int word, int match) {
-            Wi = word;
-            Mi = match;
+        public Index(int word, int match) {
+            _wI = word;
+            _mI = match;
+        }
+
+        public int GetWi() {
+            return _wI;
+        }
+
+        public int GetMi() {
+            return _mI;
         }
     }
 }

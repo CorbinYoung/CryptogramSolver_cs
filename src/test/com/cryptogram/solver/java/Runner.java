@@ -1,4 +1,4 @@
-package test.com.cryptogram.solver;
+package test.com.cryptogram.solver.java;
 
 import main.com.cryptogram.solver.Solver;
 
