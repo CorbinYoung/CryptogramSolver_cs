@@ -21,9 +21,7 @@ to add the plural form of some words. I have actually already added a few of the
 still in the file. **The words.txt file must remain in the root folder of the project. If you move it, the program will not work.** 
 
 As for using the project, I have included the main files involved with the Solver, along with some other
-files that they use. The main files are: [Solver](main/com/cryptogram/solver/Solver.cs),
-[Key](main/com/cryptogram/solver/Key.cs), [DataStorage](main/com/cryptogram/solver/DataStorage.cs),
-and [Dictionary](main/com/cryptogram/solver/MyDictionary.cs)
+files that they use. The main files are: Solver, Key, DataStorage, and Dictionary.
 
 Once you've pull the project down, all you have to do is create a main. Each of the above-listed classes
 are Singletons. You will only every need to reference the Solver class. Simply get its instance in main,
