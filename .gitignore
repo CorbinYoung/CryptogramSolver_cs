@@ -1,3 +1,6 @@
+# visual studio files
+.vs/
+
 # all bin and obj folders
 **/bin
 **/obj
