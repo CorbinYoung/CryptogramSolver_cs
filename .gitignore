@@ -1,0 +1,9 @@
+# visual studio files
+.vs/
+
+# all bin and obj folders
+**/bin
+**/obj
+
+# any user-specific files
+*.user
